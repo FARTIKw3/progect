@@ -1,0 +1,21 @@
+.header {
+  padding-inline: 120px;
+  margin-top: 30px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tel__clock {
+  display: flex;
+  justify-content: end;
+}
+.tel__number {
+  font-weight: 600;
+}
