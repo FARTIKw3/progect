@@ -1,11 +1,37 @@
+import Image from "next/image";
 import styles from "./styles.module.css";
+import Link from "next/link";
+import { Tel } from "../tel";
 
 export const Footer = () => {
   return (
-    <div className={styles.footer}>
-      <div>
-        <h4 className={styles.footer__title}>(с) 2022. Все права защищены.</h4>
+    <footer className={styles.footer}>
+      <div className={styles.footer__info}>
+        <div>
+          <Image src="/Logo.svg" width={100} height={50} alt="Logo" />
+        </div>
+        <div className={styles.footer__links}>
+          <Link href="/">Главная</Link>
+          <Link href="/testLink">Тест</Link>
+
+          <Link href="/about">О нас</Link>
+          <Link href="/price">Цены</Link>
+        </div>
+        <div>
+          <p className={styles.footer__paragh}>
+            Политика конфиденциальности Условия пользования
+          </p>
+        </div>
+
+        <Tel />
       </div>
-    </div>
+      <div className={styles.footer__end}>
+        <div>
+          <h4 className={styles.footer__title}>
+            (с) 2022. Все права защищены.
+          </h4>
+        </div>
+      </div>
+    </footer>
   );
 };
