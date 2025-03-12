@@ -1,7 +1,9 @@
 .tel {
   display: flex;
   align-items: center;
-  gap: 10px;
+  flex-direction: column;
+  white-space: nowrap;
+  gap: 0px;
 }
 .tel__clock {
   display: flex;
@@ -9,4 +11,16 @@
 }
 .tel__number {
   font-weight: 600;
+}
+.container {
+  display: flex;
+  gap: 20px;
+}
+.tel__clock {
+  margin: 0 auto;
+}
+@media (max-width: 960px) {
+  .container {
+    display: none;
+  }
 }

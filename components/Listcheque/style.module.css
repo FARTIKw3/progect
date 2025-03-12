@@ -1,0 +1,39 @@
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 220px;
+  margin-top: 164px;
+}
+.title {
+  font-size: 30px;
+  font-weight: 600;
+}
+.paragh {
+  font-size: 20px;
+  color: #262626b1;
+  max-width: 563px;
+  margin: 39px 0;
+}
+
+@media (max-width: 1070px) {
+  .container {
+    min-height: 364px;
+    background-color: #fff0e9;
+    padding: 20px;
+  }
+  .image {
+    display: none;
+  }
+}
+@media (max-width: 430px) {
+  .title {
+    font-size: 22px;
+    margin: 20px 0;
+  }
+  .paragh {
+    font-size: 15px;
+  }
+}

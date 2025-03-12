@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={`${MontAlt.className}  antialiased`}>
         <Header />
         <div>{children}</div>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

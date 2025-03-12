@@ -1,0 +1,15 @@
+import styles from "./style.module.css";
+import { Article } from "../article";
+import { OurServices } from "@/components/ourService";
+import { Services } from "@/components/ServicesWork";
+import { ListCheque } from "../Listcheque";
+export const MainPage = () => {
+  return (
+    <>
+      <Article />
+      <Services />
+      <OurServices />
+      <ListCheque />
+    </>
+  );
+};
