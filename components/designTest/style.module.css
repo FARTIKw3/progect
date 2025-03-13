@@ -19,11 +19,13 @@
 }
 @media (max-width: 660px) {
   .container {
-    padding: 43px 0 0 43px;
+    justify-content: center;
+    padding: 33px 43px 43px 70px;
   }
   .title {
     max-width: 387px;
   }
   .paragh {
+    margin: 20px 0;
   }
 }

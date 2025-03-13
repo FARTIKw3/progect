@@ -15,10 +15,10 @@
     right: 0;
     width: 15.5rem;
     height: 100vh;
-    padding: 20px;
+    padding: 200px 20px 20px 20px;
     background-color: #fff;
 
-    justify-content: center;
+    justify-content: start;
     flex-direction: column;
     z-index: 10;
     transform: translateX(100%);

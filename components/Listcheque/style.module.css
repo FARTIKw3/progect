@@ -29,11 +29,19 @@
   }
 }
 @media (max-width: 430px) {
+  .container {
+    padding-left: 50px;
+  }
   .title {
     font-size: 22px;
     margin: 20px 0;
   }
   .paragh {
-    font-size: 15px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 360px) {
+  .container {
+    padding-left: 20px;
   }
 }
