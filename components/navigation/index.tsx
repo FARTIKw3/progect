@@ -8,11 +8,14 @@ import { Hamburger } from "../hamburger";
 import { useState } from "react";
 import { Tel } from "../tel";
 
-export const Navigation = () => {
+export const Navigation = ({}) => {
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
   const toggleNav = () => {
     setIsActive((prev) => !prev);
+  };
+  const handleLinkClick = () => {
+    setIsActive(false);
   };
   return (
     <>
@@ -26,6 +29,7 @@ export const Navigation = () => {
                 "underline-offset-2",
                 pathname === link.href && "underline text-[#BD7048] "
               )}
+              onClick={handleLinkClick}
             >
               {link.label}
             </Link>

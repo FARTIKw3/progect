@@ -1,7 +1,8 @@
+"use client";
 import Image from "next/image";
-import { Navigation } from "../navigation";
 import styles from "./styles.module.css";
-import { Tel } from "../tel";
+import { Navigation } from "../navigation";
+
 export const Header = () => {
   return (
     <header className={styles.header}>
