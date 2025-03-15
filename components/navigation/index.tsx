@@ -14,6 +14,9 @@ export const Navigation = () => {
   const toggleNav = () => {
     setIsActive((prev) => !prev);
   };
+  const hadleCloseClick = () => {
+    setIsActive(false);
+  };
   return (
     <>
       <nav className={clsx(styles.nav, isActive && styles["is-active"])}>
@@ -26,6 +29,7 @@ export const Navigation = () => {
                 "underline-offset-2",
                 pathname === link.href && "underline text-[#BD7048] "
               )}
+              onClick={hadleCloseClick}
             >
               {link.label}
             </Link>

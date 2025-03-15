@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.boxTitle {
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+}
+
+.borderBottom {
+  margin-top: 31px;
+  height: 2px;
+  width: 555px;
+  background-color: black;
+}
+
+.title {
+  font-size: 43px;
+
+  font-weight: 500;
+}
+
+.title span {
+  color: #bd7048;
+}
+@media (max-width: 1060px) {
+  .boxTitle {
+    text-align: center;
+  }
+  .borderBottom {
+    display: none;
+  }
+}
+@media (max-width: 520px) {
+  .title {
+    max-width: 300px;
+    font-size: 22px;
+  }
+}
+.sliderContainer {
+  display: flex;
+  justify-content: center;
+}
