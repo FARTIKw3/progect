@@ -1,0 +1,111 @@
+.orangeTitle {
+  max-width: 869px;
+  min-height: 90px;
+  background-color: #bd7048;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px 0 0 15px;
+}
+.info {
+  max-width: 522px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.paragh {
+  font-size: 20px;
+  margin: 34px 0 24px;
+}
+.span {
+  font-size: 20px;
+  font-weight: 600;
+}
+.list {
+  margin: 34px 44px;
+  list-style: disc;
+  font-size: 20px;
+}
+.orangeSpan {
+  font-size: 30px;
+  color: #bd7048;
+  font-weight: 500;
+}
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.boxBtn {
+  margin-top: 35px;
+  display: flex;
+  gap: 75px;
+  justify-content: center;
+  align-items: center;
+}
+.btnOrange {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-weight: 500;
+  border-radius: 50px;
+  font-size: 15px;
+  background-color: #bd7048;
+  padding: 15px 35px 19px;
+  cursor: pointer;
+}
+.btnPink {
+  padding: 15px 35px 19px;
+  border-radius: 50px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #bd7048;
+  background-color: #ffdbc9;
+}
+
+@media (max-width: 1080px) {
+  .orangeTitle {
+    max-width: 1440px;
+    border-radius: 0;
+  }
+  .boxBtn {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 540px) {
+  .paragh {
+    font-size: 16px;
+  }
+  .paraghSec {
+    font-size: 18px;
+  }
+  .span {
+    font-size: 18px;
+  }
+  .list {
+    font-size: 15px;
+  }
+  .orangeSpan {
+    font-size: 24px;
+  }
+  .box {
+    justify-content: space-evenly;
+  }
+  .boxBtn {
+    gap: 20;
+    flex-direction: column;
+  }
+  .btnPink {
+    padding: 17px 72px;
+    font-size: 12px;
+  }
+  .btnOrange {
+    font-size: 12px;
+    gap: 0;
+    padding: 17px 110px;
+  }
+}
