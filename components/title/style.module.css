@@ -1,0 +1,39 @@
+.container {
+  max-width: 1000px;
+  padding: 20px;
+  margin: 180px auto;
+}
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.title2 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  display: none;
+  margin-bottom: 40px;
+}
+.paragh {
+  font-size: 20px;
+  font-weight: 500;
+  color: #262626b4;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .paragh {
+    display: none;
+  }
+  .title {
+    display: none;
+  }
+  .title2 {
+    display: block;
+    font-size: 34px;
+  }
+  .container {
+    margin: 70px auto;
+  }
+}

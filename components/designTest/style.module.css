@@ -1,0 +1,31 @@
+.container {
+  max-width: 1640px;
+  min-height: 490px;
+  margin: 0 auto;
+  background-image: url(/designTest.jpg);
+  padding: 118px 0 0 131px;
+}
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  max-width: 447px;
+}
+.paragh {
+  font-size: 20px;
+  max-width: 563px;
+  margin: 47px 0;
+  color: #ffffffcb;
+}
+@media (max-width: 660px) {
+  .container {
+    justify-content: center;
+    padding: 33px 43px 43px 70px;
+  }
+  .title {
+    max-width: 387px;
+  }
+  .paragh {
+    margin: 20px 0;
+  }
+}

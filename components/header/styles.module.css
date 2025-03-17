@@ -1,8 +1,17 @@
 .header {
   padding-inline: 120px;
   margin-top: 30px;
+  align-items: center;
 }
 .navbar {
   display: flex;
+  align-items: center;
+  align-items: center;
   justify-content: space-between;
+}
+
+@media (max-width: 960px) {
+  .header {
+    padding-inline: 30px;
+  }
 }
