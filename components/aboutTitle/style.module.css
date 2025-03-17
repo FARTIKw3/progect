@@ -1,0 +1,62 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.boxSpan {
+  text-align: center;
+  margin-top: 40px;
+}
+.span {
+  font-size: 30px;
+  font-weight: 500;
+}
+.spanOrange {
+  color: #bd7048;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.title {
+  font-size: 50px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 110px;
+}
+.boxTitle {
+  max-width: 951px;
+  margin: 0 auto;
+}
+@media (max-width: 980px) {
+  .title {
+    font-size: 42px;
+  }
+}
+@media (max-width: 660px) {
+  .boxSpan {
+    padding-left: 23px;
+  }
+  .title {
+    font-size: 34px;
+  }
+  .span {
+    font-size: 25px;
+  }
+}
+@media (max-width: 500px) {
+  .boxSpan {
+    text-align: start;
+  }
+
+  .title {
+    font-size: 23px;
+    text-align: start;
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+  .span {
+    font-size: 25px;
+  }
+}

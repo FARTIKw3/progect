@@ -49,6 +49,8 @@
   font-size: 20px;
   padding: 34px 0 0 26px;
   color: #262626be;
+  margin-top: 21px;
+  transition: 0.5s;
 }
 
 .accordion_collapse.open {
@@ -72,6 +74,7 @@
 
 .box.open {
   transform: rotate(45deg);
+  transition: 0.5s;
 }
 @media (max-width: 660px) {
   .title {
