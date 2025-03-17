@@ -1,9 +1,26 @@
+@import url("swiper/css");
+@import url("swiper/css/navigation");
+@import url("swiper/css/pagination");
+@import url("swiper/css/scrollbar");
+
 .container {
   display: flex;
   justify-content: center;
   padding: 20px;
+  margin-bottom: 61px;
 }
-
+.sliderContainer {
+  width: 100%;
+  /* margin-left: 200px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 120px;
+}
+.customerSwiper {
+  width: 100%;
+  max-width: 1200px;
+}
 .boxTitle {
   display: flex;
   justify-content: center;
@@ -26,6 +43,7 @@
 .title span {
   color: #bd7048;
 }
+
 @media (max-width: 1060px) {
   .boxTitle {
     text-align: center;
@@ -39,8 +57,4 @@
     max-width: 300px;
     font-size: 22px;
   }
-}
-.sliderContainer {
-  display: flex;
-  justify-content: center;
 }
