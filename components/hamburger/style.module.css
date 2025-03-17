@@ -25,6 +25,6 @@
   }
 
   .burger.active {
-    background-color: #fff; /* Цвет фона для активного гамбургера */
+    background-color: #fff;
   }
 }

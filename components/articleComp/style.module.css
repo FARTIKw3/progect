@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 50px;
+  position: relative;
 }
 .article_title {
   margin-top: 180px;
@@ -18,6 +19,15 @@
   max-width: 850px;
   color: #fff;
   margin-bottom: 42px;
+}
+.basket {
+  position: absolute;
+  top: 15%;
+  right: 30px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50px;
+  color: #2a2929;
 }
 .article_cart {
   max-width: 1170px;

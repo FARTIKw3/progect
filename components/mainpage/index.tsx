@@ -1,5 +1,5 @@
 import styles from "./style.module.css";
-import { Article } from "../article";
+import { Article } from "../articleComp";
 import { OurServices } from "@/components/ourService";
 import { Services } from "@/components/ServicesWork";
 import { ListCheque } from "../Listcheque";
