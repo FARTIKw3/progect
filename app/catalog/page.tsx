@@ -1,3 +1,9 @@
+import { CatalogTitle } from "@/components/catalogTitle";
+
 export default function Catalog() {
-  return <div></div>;
+  return (
+    <>
+      <CatalogTitle />
+    </>
+  );
 }
