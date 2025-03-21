@@ -4,42 +4,72 @@ import { IoBagHandleOutline } from "react-icons/io5";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
-import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
-import { slideData } from "./sliderData";
+import {
+  Navigation,
+  Pagination,
+  Autoplay,
+  EffectCoverflow,
+} from "swiper/modules";
 import Image from "next/image";
-export const Slider = ({}) => {
+import { useEffect, useState } from "react";
+import { fetchLivingRoom } from "@/api/strapi";
+
+export const SliderLivR = ({}) => {
+  const [slide, setSlide] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchRoomLiv = async () => {
+      try {
+        const data = await fetchLivingRoom("image");
+        setSlide(data.data);
+      } catch (error) {
+        console.log("error", error);
+      }
+    };
+    fetchRoomLiv();
+  }, []);
+
   return (
     <>
       <div className={styles.sliderContainer}>
         <Swiper
-          effect="fade "
+          effect="coverflow"
           slidesPerView={3}
-          autoplay={{ delay: 10000 }}
-          spaceBetween={20}
+          autoplay={{ delay: 5000 }}
+          spaceBetween={40}
           centeredSlides={true}
           loop={true}
+          navigation
+          pagination={{ clickable: true }}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false,
+          }}
           breakpoints={{
             320: { slidesPerView: 1, spaceBetween: 10 },
             768: { slidesPerView: 2, spaceBetween: 20 },
             1024: { slidesPerView: 3, spaceBetween: 30 },
           }}
-          modules={[Autoplay, Navigation, Pagination, EffectFade]}
+          modules={[Autoplay, Navigation, Pagination, EffectCoverflow]}
           className={styles.customSwiper}
         >
-          {slideData.map((item, id) => (
+          {slide.map((room, id) => (
             <SwiperSlide key={id} className={styles.customSlider}>
               <div className={styles.cart}>
                 <div className={styles.img}>
                   <Image
-                    src={item.image}
+                    src={`http://localhost:1337${room.image[0]?.url}`}
                     width={362}
                     height={273}
-                    alt={item.title}
+                    alt={room.name}
                     unoptimized
                   />
                 </div>
                 <div className={styles.box}>
-                  <h2 className={styles.title}>{item.title}</h2>
+                  <h2 className={styles.title}>{room.name}</h2>
                   <button className={styles.btn}>
                     <IoBagHandleOutline size={18} />
                     <span className={styles.span}>Выбрать</span>
@@ -49,7 +79,7 @@ export const Slider = ({}) => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className={styles.btnRight}>
+        {/* <div className={styles.btnRight}>
           <button>
             <FaArrowRight />
           </button>
@@ -58,7 +88,7 @@ export const Slider = ({}) => {
           <button>
             <FaArrowLeft />
           </button>
-        </div>
+        </div> */}
       </div>
       ;
     </>

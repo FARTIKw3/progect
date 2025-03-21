@@ -19,8 +19,3 @@
 .tel__clock {
   margin: 0 auto;
 }
-@media (max-width: 960px) {
-  .container {
-    display: none;
-  }
-}

@@ -24,7 +24,9 @@
     transform: translateX(100%);
     transition: 0.5s;
   }
-
+  .none {
+    display: none;
+  }
   .is-active {
     transform: translateX(0);
   }

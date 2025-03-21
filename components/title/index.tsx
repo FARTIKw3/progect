@@ -1,4 +1,10 @@
+import { RoomName } from "@/shared/ui/roomName";
 import styles from "./style.module.css";
+import { SliderLivR } from "../catalogTitle/livingRoomSlider";
+import { SliderChilR } from "../catalogTitle/childrenRoomSlider";
+import { SliderCorridors } from "../catalogTitle/corridorsRoomSlider";
+import { Controls } from "@/shared/ui/controls";
+import Link from "next/link";
 
 export const Title = () => {
   return (
@@ -9,6 +15,15 @@ export const Title = () => {
         Выбирая дизайн комнаты, вы получаете смету со списком всех предметов в
         интерьере, названиями, артикулами, цветом стен и так далее.
       </p>
+      <RoomName text="Гостиные" />
+      <SliderLivR />
+      <RoomName text="Детские" />
+      <SliderChilR />
+      <RoomName text="Коридоры" />
+      <SliderCorridors />
+      <Link href="/catalog">
+        <Controls text="К каталогу комнат" />
+      </Link>
     </div>
   );
 };

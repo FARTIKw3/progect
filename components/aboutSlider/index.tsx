@@ -4,7 +4,7 @@ import styles from "./style.module.css";
 import { sliderBase } from "./sliderBase";
 import { SwiperSlide, Swiper } from "swiper/react";
 import Image from "next/image";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, Pagination, EffectCoverflow } from "swiper/modules";
 export const AboutSlider = () => {
   return (
     <>
@@ -18,14 +18,12 @@ export const AboutSlider = () => {
       </div>
       <div className={styles.sliderContainer}>
         <Swiper
-          loop={true}
           slidesPerView={1}
           grabCursor={true}
           centeredSlides={true}
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 3000 }}
-          speed={1000}
-          modules={[Autoplay, Pagination]}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          speed={800}
+          modules={[Autoplay, Pagination, EffectCoverflow]}
           className={styles.customerSwiper}
           breakpoints={{
             1440: {

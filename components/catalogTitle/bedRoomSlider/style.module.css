@@ -16,6 +16,7 @@
   padding: 17px 38px;
   background-color: #fafafa;
   border-radius: 50px;
+  cursor: pointer;
 }
 .span {
   font-size: 15px;

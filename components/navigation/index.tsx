@@ -36,7 +36,10 @@ export const Navigation = ({}) => {
           );
         })}
       </nav>
-      <Tel />
+      <div className={styles.none}>
+        {" "}
+        <Tel />
+      </div>
       <Hamburger isActive={isActive} toggleNav={toggleNav} />
     </>
   );

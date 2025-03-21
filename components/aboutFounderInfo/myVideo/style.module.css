@@ -20,6 +20,7 @@
   color: #bd7048;
 }
 .video {
+  max-width: 1440px;
   margin: 25px auto 0;
   max-width: 1240px;
   height: 660px;

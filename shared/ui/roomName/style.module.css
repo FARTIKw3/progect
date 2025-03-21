@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 45px;
+}
+.title {
+  font-size: 30px;
+  font-weight: 500;
+}
+.bottomLine {
+  width: 100%;
+  height: 1px;
+  background-color: #cbcbcb;
+}
