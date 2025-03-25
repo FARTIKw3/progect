@@ -4,31 +4,31 @@ import { IoBagHandleOutline } from "react-icons/io5";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { fetchRooms } from "@/api/strapi";
+import Image from "next/image";
 import {
-  Navigation,
-  Pagination,
   Autoplay,
   EffectCoverflow,
+  Navigation,
+  Pagination,
 } from "swiper/modules";
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import { fetchLivingRoom } from "@/api/strapi";
 
-export const SliderLivR = ({}) => {
-  const [slide, setSlide] = useState<any[]>([]);
+export const CatalogSlider = ({ endpoint }: { endpoint: string }) => {
+  const [slideChildren, setSlideChildren] = useState<any[]>([]);
 
   useEffect(() => {
-    const fetchRoomLiv = async () => {
+    const fetchRoomchild = async () => {
       try {
-        const data = await fetchLivingRoom("image");
-        setSlide(data.data);
+        const data = await fetchRooms(endpoint, "image");
+        setSlideChildren(data.data);
       } catch (error) {
         console.log("error", error);
       }
     };
-    fetchRoomLiv();
+    fetchRoomchild();
   }, []);
-
+  console.log("Slide Data:", slideChildren);
   return (
     <>
       <div className={styles.sliderContainer}>
@@ -40,7 +40,6 @@ export const SliderLivR = ({}) => {
           centeredSlides={true}
           loop={true}
           navigation
-          pagination={{ clickable: true }}
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
@@ -56,7 +55,7 @@ export const SliderLivR = ({}) => {
           modules={[Autoplay, Navigation, Pagination, EffectCoverflow]}
           className={styles.customSwiper}
         >
-          {slide.map((room, id) => (
+          {slideChildren.map((room, id) => (
             <SwiperSlide key={id} className={styles.customSlider}>
               <div className={styles.cart}>
                 <div className={styles.img}>
@@ -79,16 +78,6 @@ export const SliderLivR = ({}) => {
             </SwiperSlide>
           ))}
         </Swiper>
-        {/* <div className={styles.btnRight}>
-          <button>
-            <FaArrowRight />
-          </button>
-        </div>
-        <div className={styles.btnLeft}>
-          <button>
-            <FaArrowLeft />
-          </button>
-        </div> */}
       </div>
       ;
     </>

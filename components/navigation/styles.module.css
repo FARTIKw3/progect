@@ -17,6 +17,7 @@
     height: 100vh;
     padding: 200px 20px 20px 20px;
     background-color: #fff;
+    box-shadow: 4px 0 10px #62626254;
 
     justify-content: start;
     flex-direction: column;

@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import styles from "./styles.module.css";
 import { Hamburger } from "../hamburger";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Tel } from "../tel";
 
 export const Navigation = ({}) => {
@@ -17,6 +17,13 @@ export const Navigation = ({}) => {
   const handleLinkClick = () => {
     setIsActive(false);
   };
+  useEffect(() => {
+    if (isActive) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isActive]);
   return (
     <>
       <nav className={clsx(styles.nav, isActive && styles["is-active"])}>

@@ -10,7 +10,7 @@ export const MyVideo = () => {
     setIsMounted(true);
   }, []);
   return (
-    <div>
+    <div className={styles.container}>
       <div className={styles.boxTitle}>
         <h1 className={styles.title}>
           <span>За 4 года</span> мы реализовали <br />

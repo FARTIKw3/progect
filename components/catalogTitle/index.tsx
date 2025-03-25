@@ -1,11 +1,6 @@
 import { RoomName } from "@/shared/ui/roomName";
-import { SliderLivR } from "./livingRoomSlider";
 import styles from "./style.module.css";
-import { SliderChilR } from "./childrenRoomSlider";
-import { SliderCorridors } from "./corridorsRoomSlider";
-import { SliderKitchen } from "./kitchenSlider";
-import { SliderBathRoom } from "./bathRoomSlider";
-import { SliderBedRoom } from "./bedRoomSlider";
+import { CatalogSlider } from "../catalogSlider";
 
 export const CatalogTitle = () => {
   return (
@@ -19,17 +14,17 @@ export const CatalogTitle = () => {
       </div>
       <div className={styles.containerSlider}>
         <RoomName text="Гостиные" />
-        <SliderLivR />
+        <CatalogSlider endpoint="living-rooms" />
         <RoomName text="Детские" />
-        <SliderChilR />
+        <CatalogSlider endpoint="childrens-rooms" />
         <RoomName text="Коридоры" />
-        <SliderCorridors />
+        <CatalogSlider endpoint="corridor-rooms" />
         <RoomName text="Кухни" />
-        <SliderKitchen />
+        <CatalogSlider endpoint="kitchens" />
         <RoomName text="Санузлы" />
-        <SliderBathRoom />
+        <CatalogSlider endpoint="sanuzlies" />
         <RoomName text="Спальни" />
-        <SliderBedRoom />
+        <CatalogSlider endpoint="bedrooms" />
       </div>
     </>
   );

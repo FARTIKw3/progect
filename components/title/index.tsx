@@ -1,10 +1,8 @@
 import { RoomName } from "@/shared/ui/roomName";
 import styles from "./style.module.css";
-import { SliderLivR } from "../catalogTitle/livingRoomSlider";
-import { SliderChilR } from "../catalogTitle/childrenRoomSlider";
-import { SliderCorridors } from "../catalogTitle/corridorsRoomSlider";
 import { Controls } from "@/shared/ui/controls";
 import Link from "next/link";
+import { CatalogSlider } from "../catalogSlider";
 
 export const Title = () => {
   return (
@@ -16,11 +14,11 @@ export const Title = () => {
         интерьере, названиями, артикулами, цветом стен и так далее.
       </p>
       <RoomName text="Гостиные" />
-      <SliderLivR />
+      <CatalogSlider endpoint="living-rooms" />
       <RoomName text="Детские" />
-      <SliderChilR />
+      <CatalogSlider endpoint="childrens-rooms" />
       <RoomName text="Коридоры" />
-      <SliderCorridors />
+      <CatalogSlider endpoint="corridor-rooms" />
       <Link href="/catalog">
         <Controls text="К каталогу комнат" />
       </Link>

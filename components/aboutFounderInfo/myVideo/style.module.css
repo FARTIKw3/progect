@@ -21,9 +21,10 @@
 }
 .video {
   max-width: 1440px;
-  margin: 25px auto 0;
+  margin: 25px auto 80px;
   max-width: 1240px;
   height: 660px;
+  box-shadow: 0 4px 10px #000;
 }
 
 @media (max-width: 1060px) {

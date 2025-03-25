@@ -1,30 +1,72 @@
 .hamburger {
   display: none;
   z-index: 10;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  background: none;
 }
 
-.hamburger.is-active {
+.hamburger.isActive {
   transform: rotate(90deg);
 }
 
-.burger {
+.hamburgerBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+}
+
+.hamburgerInner,
+.hamburgerInner::before,
+.hamburgerInner::after {
+  display: block;
   width: 2rem;
   height: 0.25rem;
   border-radius: 10px;
   background-color: #bd7048;
-  transform-origin: 1px;
-  transition: all 0.3s linear;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburgerInner {
+  position: relative;
+}
+
+.hamburgerInner::before,
+.hamburgerInner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.hamburgerInner::before {
+  top: -8px;
+}
+
+.hamburgerInner::after {
+  bottom: -8px;
+}
+
+.hamburger.isActive .hamburgerInner {
+  transform: rotate(45deg);
+}
+
+.hamburger.isActive .hamburgerInner::before {
+  top: 0;
+  opacity: 0;
+}
+
+.hamburger.isActive .hamburgerInner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
 }
 
 @media (max-width: 960px) {
   .hamburger {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 0;
-  }
-
-  .burger.active {
-    background-color: #fff;
   }
 }
