@@ -13,9 +13,11 @@ import {
   Navigation,
   Pagination,
 } from "swiper/modules";
+import { useBasket } from "@/store/basket";
 
 export const CatalogSlider = ({ endpoint }: { endpoint: string }) => {
   const [slideChildren, setSlideChildren] = useState<any[]>([]);
+  const { addToCart } = useBasket();
 
   useEffect(() => {
     const fetchRoomchild = async () => {
@@ -69,7 +71,10 @@ export const CatalogSlider = ({ endpoint }: { endpoint: string }) => {
                 </div>
                 <div className={styles.box}>
                   <h2 className={styles.title}>{room.name}</h2>
-                  <button className={styles.btn}>
+                  <button
+                    className={styles.btn}
+                    onClick={() => addToCart(room)}
+                  >
                     <IoBagHandleOutline size={18} />
                     <span className={styles.span}>Выбрать</span>
                   </button>

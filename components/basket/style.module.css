@@ -1,0 +1,108 @@
+.basket {
+  position: absolute;
+  top: 120px;
+  right: 10px;
+  border-radius: 50px;
+  color: #2a2929;
+  cursor: pointer;
+}
+.basketContainer {
+  position: absolute;
+  top: 100;
+  right: 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.468);
+  background-color: #ffffff;
+  padding: 40;
+  z-index: 1;
+  width: 100%;
+  max-width: 600px;
+  height: 500px;
+  border-radius: 32px;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.basketFooter {
+  text-align: center;
+  margin-top: 40px;
+}
+.basketContent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 16px;
+  color: #2a2929;
+}
+.basketClear {
+  text-align: center;
+  margin-top: 150px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.none {
+  display: none;
+}
+.span {
+  margin-left: 18px;
+  background-color: red;
+  border-radius: 50%;
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+.basketHeader {
+  display: flex;
+  align-items: center;
+}
+.title {
+  font-size: 14px;
+  font-weight: 600;
+}
+.basketItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  background-color: #fdfcfc;
+  font-weight: 600;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.468);
+  padding: 20px;
+  border-radius: 20px;
+}
+.basketClose {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.removeBtn {
+  color: red;
+  cursor: pointer;
+}
+.btn {
+  padding: 23px 95px;
+  background-color: #bd7048;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 490px) {
+  .btn {
+    padding: 23px 30px;
+  }
+}
+@media (max-width: 460px) {
+  .btn {
+    padding: 23px 10px;
+  }
+  .basketClose {
+    font-size: 13px;
+  }
+  .title {
+    font-size: 13px;
+  }
+}

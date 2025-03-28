@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./styles.module.css";
 import { Navigation } from "../navigation";
 
-export const Header = () => {
+export const Header = ({}) => {
   return (
     <div className={styles.container}>
       <header className={styles.header}>

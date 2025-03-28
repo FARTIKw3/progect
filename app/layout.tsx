@@ -3,6 +3,7 @@ import { Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { Basket } from "@/components/basket";
 
 const MontAlt = Montserrat_Alternates({
   variable: "--font-montserrat-alternates",
@@ -21,6 +22,7 @@ export default function RootLayout({
         <div>
           <Header />
           <div>{children}</div>
+          <Basket />
           <Footer />
         </div>
       </body>
