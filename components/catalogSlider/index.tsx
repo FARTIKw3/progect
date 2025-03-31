@@ -2,8 +2,6 @@
 import styles from "./style.module.css";
 import { IoBagHandleOutline } from "react-icons/io5";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FaArrowLeft } from "react-icons/fa";
-import { FaArrowRight } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { fetchRooms } from "@/api/strapi";
 import Image from "next/image";
@@ -14,7 +12,6 @@ import {
   Pagination,
 } from "swiper/modules";
 import { useBasket } from "@/store/basket";
-
 export const CatalogSlider = ({ endpoint }: { endpoint: string }) => {
   const [slideChildren, setSlideChildren] = useState<any[]>([]);
   const { addToCart } = useBasket();
@@ -29,7 +26,7 @@ export const CatalogSlider = ({ endpoint }: { endpoint: string }) => {
       }
     };
     fetchRoomchild();
-  }, []);
+  }, [endpoint]);
   console.log("Slide Data:", slideChildren);
   return (
     <>

@@ -6,7 +6,6 @@ import { useBasket } from "@/store/basket";
 import Image from "next/image";
 import clsx from "clsx";
 import { IoMdClose } from "react-icons/io";
-import { Controls } from "@/shared/ui/controls";
 import Link from "next/link";
 
 export const Basket = ({}) => {
