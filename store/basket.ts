@@ -9,6 +9,7 @@ interface BasketItem {
   url: string;
   image: string;
 }
+
 type State = {
   cart: BasketItem[];
 };

@@ -12,6 +12,7 @@ import {
   Pagination,
 } from "swiper/modules";
 import { useBasket } from "@/store/basket";
+import Link from "next/link";
 export const CatalogSlider = ({ endpoint }: { endpoint: string }) => {
   const [slideChildren, setSlideChildren] = useState<any[]>([]);
   const { addToCart } = useBasket();
@@ -68,13 +69,13 @@ export const CatalogSlider = ({ endpoint }: { endpoint: string }) => {
                 </div>
                 <div className={styles.box}>
                   <h2 className={styles.title}>{room.name}</h2>
-                  <button
+                  <Link
                     className={styles.btn}
-                    onClick={() => addToCart(room)}
+                    href={`/catalog/${endpoint}/${room.documentId}`}
                   >
                     <IoBagHandleOutline size={18} />
                     <span className={styles.span}>Выбрать</span>
-                  </button>
+                  </Link>
                 </div>
               </div>
             </SwiperSlide>
