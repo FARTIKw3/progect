@@ -1,18 +1,15 @@
 "use client";
 import styles from "./style.module.css";
 import { IoBagHandleOutline } from "react-icons/io5";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { useEffect, useState } from "react";
 import { fetchRooms } from "@/api/strapi";
 import Image from "next/image";
-import {
-  Autoplay,
-  EffectCoverflow,
-  Navigation,
-  Pagination,
-} from "swiper/modules";
+import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 import { useBasket } from "@/store/basket";
 import Link from "next/link";
+import { SliderRight } from "../sliderButtons/buttonRight";
+import { SlideLeft } from "../sliderButtons/buttonLeft";
 export const CatalogSlider = ({ endpoint }: { endpoint: string }) => {
   const [slideChildren, setSlideChildren] = useState<any[]>([]);
   const { addToCart } = useBasket();
@@ -36,10 +33,9 @@ export const CatalogSlider = ({ endpoint }: { endpoint: string }) => {
           effect="coverflow"
           slidesPerView={3}
           autoplay={{ delay: 5000 }}
-          spaceBetween={40}
+          spaceBetween={30}
           centeredSlides={true}
           loop={true}
-          navigation
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
@@ -49,10 +45,10 @@ export const CatalogSlider = ({ endpoint }: { endpoint: string }) => {
           }}
           breakpoints={{
             320: { slidesPerView: 1, spaceBetween: 10 },
-            768: { slidesPerView: 2, spaceBetween: 20 },
+            628: { slidesPerView: 2, spaceBetween: 20 },
             1024: { slidesPerView: 3, spaceBetween: 30 },
           }}
-          modules={[Autoplay, Navigation, Pagination, EffectCoverflow]}
+          modules={[Autoplay, Pagination, EffectCoverflow]}
           className={styles.customSwiper}
         >
           {slideChildren.map((room, id) => (
@@ -80,6 +76,12 @@ export const CatalogSlider = ({ endpoint }: { endpoint: string }) => {
               </div>
             </SwiperSlide>
           ))}
+          <div className={styles.btnRight}>
+            <SliderRight />
+          </div>
+          <div className={styles.btnLeft}>
+            <SlideLeft />
+          </div>
         </Swiper>
       </div>
       ;

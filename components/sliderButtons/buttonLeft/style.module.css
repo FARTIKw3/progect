@@ -1,0 +1,21 @@
+.btnLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  cursor: pointer;
+  height: 56px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 4 2 8 #000;
+}
+.btn {
+  cursor: pointer;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
