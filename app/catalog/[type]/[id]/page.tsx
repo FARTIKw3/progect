@@ -12,5 +12,5 @@ export default async function CatalogItemPage({ params }: Params) {
   const data = await fetchRoomById(type, id, "image");
   console.log(data);
 
-  return <div>CatalogItemPage</div>;
+  return <div className="mb-[700px]">CatalogItemPage</div>;
 }

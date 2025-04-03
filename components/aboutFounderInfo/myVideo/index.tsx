@@ -22,7 +22,7 @@ export const MyVideo = () => {
         {isMounted && (
           <ReactPlayer
             light="/videoBg.jpg"
-            url="https://youtu.be/FoSgDtqb0Zc"
+            url="https://youtu.be/KAqjQtZrQrQ?si=OCYnak1Jnkh3axpi"
             playIcon={
               <Image src="/PlayIcon.svg" width={130} height={130} alt="play" />
             }

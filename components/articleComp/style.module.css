@@ -10,6 +10,16 @@
   justify-content: center;
   position: relative;
 }
+.link {
+  cursor: pointer;
+  padding: 25px 50px;
+  background-color: #bd7048;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
 .article_title {
   margin-top: 180px;
   font-size: 40px;

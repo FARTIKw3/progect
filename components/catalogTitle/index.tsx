@@ -14,7 +14,7 @@ export const CatalogTitle = () => {
       </div>
       <div className={styles.containerSlider}>
         <RoomName text="Гостиные" />
-        <CatalogSlider endpoint="living-rooms" />
+        <CatalogSlider endpoint="living-room" />
         <RoomName text="Детские" />
         <CatalogSlider endpoint="childrens-rooms" />
         <RoomName text="Коридоры" />

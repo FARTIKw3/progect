@@ -1,7 +1,7 @@
 "use client";
 import styles from "./style.module.css";
 import { IoBagHandleOutline } from "react-icons/io5";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { useEffect, useState } from "react";
 import { fetchRooms } from "@/api/strapi";
 import Image from "next/image";
@@ -26,6 +26,8 @@ export const CatalogSlider = ({ endpoint }: { endpoint: string }) => {
     fetchRoomchild();
   }, [endpoint]);
   console.log("Slide Data:", slideChildren);
+  if (!slideChildren || slideChildren.length === 0)
+    return <h1 className={styles.noRooms}>Комнат нет</h1>;
   return (
     <>
       <div className={styles.sliderContainer}>
@@ -69,8 +71,13 @@ export const CatalogSlider = ({ endpoint }: { endpoint: string }) => {
                     className={styles.btn}
                     href={`/catalog/${endpoint}/${room.documentId}`}
                   >
-                    <IoBagHandleOutline size={18} />
-                    <span className={styles.span}>Выбрать</span>
+                    <div>
+                      <IoBagHandleOutline size={18} />
+                    </div>
+                    <div>
+                      {" "}
+                      <span className={styles.span}>Выбрать</span>
+                    </div>
                   </Link>
                 </div>
               </div>
