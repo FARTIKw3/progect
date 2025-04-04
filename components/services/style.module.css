@@ -1,0 +1,87 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.banner {
+  position: relative;
+  height: 70vh;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to top, #000, transparent);
+}
+.bannerContainer {
+  position: relative;
+  z-index: 2;
+}
+.description {
+  font-size: 20px;
+  color: #333;
+  margin-top: 63px;
+}
+.pricingContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+.pricing {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.btn {
+  display: flex;
+  gap: 5px;
+  background-color: #c47f56;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+}
+.buy {
+  color: #c47f56;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 44px;
+}
+.price {
+  font-weight: 500;
+  font-size: 20px;
+}
+.priseTwo {
+  font-weight: 600;
+  font-size: 30px;
+  margin-left: 20px;
+}
+.sectionTitle {
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+.services {
+  display: flex;
+  gap: 48px;
+  margin-top: 54px;
+  padding-bottom: 90px;
+}
+.serviceItem {
+  text-align: center;
+  width: 200px;
+}
+.serviceItemImg {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.serviceItemP {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 40px;
+}
