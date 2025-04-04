@@ -2,6 +2,7 @@ import { Controls } from "@/shared/ui/controls";
 import styles from "./style.module.css";
 import Image from "next/image";
 import { FaRegFilePdf } from "react-icons/fa6";
+import Link from "next/link";
 
 export const OurServices = () => {
   return (
@@ -31,7 +32,9 @@ export const OurServices = () => {
             </ul>
           </div>
           <div className={styles.conrols}>
-            <Controls text="Оставить заявку" />
+            <Link href="/price">
+              <h1 className={styles.link}>Оставить заявку</h1>
+            </Link>
             <div className={styles.conrols_orange}>
               <FaRegFilePdf size={22} />{" "}
               <button className={styles.btn}>Посмотреть пример</button>

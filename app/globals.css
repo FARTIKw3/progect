@@ -5,6 +5,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-montserrat-alternates);
 }
+
 @import "swiper/css";
 @import "swiper/css/navigation";
 @import "swiper/css/pagination";

@@ -2,17 +2,17 @@ import { Controls } from "@/shared/ui/controls";
 import styles from "./style.module.css";
 import Image from "next/image";
 import { IoIosCheckboxOutline } from "react-icons/io";
-import { FaBasketShopping } from "react-icons/fa6";
+import Link from "next/link";
+
 export const Article = () => {
   return (
     <article className={styles.article}>
       <h1 className={styles.article_title}>
         Дизайн-проект для вашей квартиры за 2 недели и 199 000 ₸
       </h1>
-      <div className={styles.basket}>
-        <FaBasketShopping size={44} />
-      </div>
-      <Controls text="Консультация" />
+      <Link href="/about">
+        <h1 className={styles.link}> Консультация</h1>
+      </Link>
       <div className={styles.article_cart}>
         <div className={styles.cartClock}>
           <div className={styles.clock_svg}>

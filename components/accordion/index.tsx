@@ -19,7 +19,7 @@ export const Accordion = () => {
       <h1 className={styles.title}>Часто задаваемые вопросы</h1>
       <div className={styles.container}>
         <ul className={styles.accordion}>
-          {faqList.map((faqItem, id: number) => {
+          {faqList.map((faqItem, id) => {
             return (
               <li key={id} className={styles.accordion_item}>
                 <button
@@ -37,7 +37,7 @@ export const Accordion = () => {
                       }`}
                     />
                   </div>
-                  {faqItem.q}{" "}
+                  {faqItem.q}
                 </button>
                 <div
                   className={`${styles.accordion_collapse} ${

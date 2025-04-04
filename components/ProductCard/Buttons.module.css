@@ -1,0 +1,26 @@
+.buttonsContainer {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.button {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.2s ease-in-out;
+}
+
+.button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}

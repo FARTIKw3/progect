@@ -20,14 +20,8 @@ export const Footer = () => {
         <div className={styles.footer__paragh}>
           <p>Политика конфиденциальности Условия пользования</p>
         </div>
-        <div className={styles.container}>
-          <div>
-            <Image src="/tel.svg" width={15} height={15} alt="tel" />
-          </div>
-          <div className={styles.tel}>
-            <span className={styles.tel__number}>+7 700 505 3000</span>
-            <span className={styles.tel__clock}>C 9:00 до 18:00</span>
-          </div>
+        <div>
+          <Tel />
         </div>
       </div>
       <div className={styles.footer__end}>

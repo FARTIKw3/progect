@@ -3,14 +3,16 @@ import Image from "next/image";
 import styles from "./styles.module.css";
 import { Navigation } from "../navigation";
 
-export const Header = () => {
+export const Header = ({}) => {
   return (
-    <header className={styles.header}>
-      <div className={styles.navbar}>
-        <Image src="/Logo.svg" width={100} height={50} alt="Logo" />
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <div className={styles.navbar}>
+          <Image src="/Logo.svg" width={100} height={50} alt="Logo" />
 
-        <Navigation />
-      </div>
-    </header>
+          <Navigation />
+        </div>
+      </header>
+    </div>
   );
 };

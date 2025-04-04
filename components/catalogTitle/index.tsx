@@ -1,5 +1,6 @@
-import { Slider } from "./catalogSlider";
+import { RoomName } from "@/shared/ui/roomName";
 import styles from "./style.module.css";
+import { CatalogSlider } from "../catalogSlider";
 
 export const CatalogTitle = () => {
   return (
@@ -11,7 +12,20 @@ export const CatalogTitle = () => {
           интерьере, названиями, артикулами, цветом стен и так далее.
         </p>
       </div>
-      <Slider />
+      <div className={styles.containerSlider}>
+        <RoomName text="Гостиные" />
+        <CatalogSlider endpoint="living-room" />
+        <RoomName text="Детские" />
+        <CatalogSlider endpoint="childrens-rooms" />
+        <RoomName text="Коридоры" />
+        <CatalogSlider endpoint="corridor-rooms" />
+        <RoomName text="Кухни" />
+        <CatalogSlider endpoint="kitchens" />
+        <RoomName text="Санузлы" />
+        <CatalogSlider endpoint="sanuzlies" />
+        <RoomName text="Спальни" />
+        <CatalogSlider endpoint="bedrooms" />
+      </div>
     </>
   );
 };

@@ -1,0 +1,22 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.btn {
+  cursor: pointer;
+}
+.btnRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 8 #000;
+}
