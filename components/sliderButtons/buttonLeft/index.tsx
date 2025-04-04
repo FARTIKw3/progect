@@ -7,7 +7,7 @@ export const SlideLeft = () => {
   return (
     <div className={styles.container}>
       <div className={styles.btnLeft} onClick={() => swiper.slidePrev()}>
-        <button className={styles.btn}>
+        <button type="button" title="left" className={styles.btn}>
           <FaArrowLeft size={18} />
         </button>
       </div>

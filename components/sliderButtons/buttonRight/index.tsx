@@ -8,7 +8,7 @@ export const SliderRight = () => {
     <>
       <div className={styles.container}>
         <div className={styles.btnRight} onClick={() => swiper.slideNext()}>
-          <button className={styles.btn}>
+          <button type="button" title="right" className={styles.btn}>
             <FaArrowRight size={18} />
           </button>
         </div>
