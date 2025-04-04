@@ -9,7 +9,23 @@ export default function ProductPage() {
         title="Акварель (Dark)"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac consequat a, ligula consequat tellus. In tellus ultrices senectus nisl sit."
         price={30000}
-        images={["/room1.jpg", "/room2.jpg", "/room3.jpg"]} // Передаём массив изображений
+        images={[
+          {
+            id: 1,
+            url: "/room1.jpg",
+            width: 992,
+          },
+          {
+            id: 2,
+            url: "/room2.jpg",
+            width: 313,
+          },
+          {
+            id: 3,
+            url: "/room3.jpg",
+            width: 992,
+          },
+        ]}
         colorScheme="Прохладная палитра"
         materials="Краска, белая эмаль"
         accents="Лиловый цвет в отделке стен"

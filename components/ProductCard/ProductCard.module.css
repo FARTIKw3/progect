@@ -1,6 +1,4 @@
-/* Основная карточка товара */
 .card {
-  width: 1440px;
   border-radius: 20px;
   background: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -10,6 +8,9 @@
   align-items: flex-start;
   text-align: left;
   font-family: "Montserrat Alternates", sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 30px;
 }
 
 .image {
@@ -24,7 +25,8 @@
 .category {
   font-weight: 500;
   font-size: 20px;
-  padding: 5px 10px;
+  line-height: 100%;
+  margin-top: 763px;
   border-radius: 5px;
   color: #bd7048;
 }
@@ -33,36 +35,43 @@
   font-weight: 600;
   font-size: 30px;
   color: #262626;
-  margin: 20px 0;
+  margin: 10px 0;
+}
+
+.descriptionWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 118px;
+  padding-top: 25px;
 }
 
 .description {
-  font-weight: 400;
+  flex: 1;
   font-size: 20px;
   color: #262626b2;
-  margin-bottom: 20px;
+  width: 400px;
 }
 
 .details {
-  font-weight: 400;
+  flex: 1;
   font-size: 20px;
   line-height: 1.5;
-  color: #262626;
-  margin-bottom: 30px;
+  color: #262626b2;
 }
 
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: 20px;
+.span {
+  color: #bd7048;
 }
 
 .price {
   font-size: 20px;
   font-weight: 500;
   color: rgba(38, 38, 38, 0.7);
+}
+
+.buttoncon {
+  padding-top: 40px;
 }
 
 .button {
@@ -121,15 +130,6 @@
   color: rgba(38, 38, 38, 0.7);
 }
 
-/* 📷 Галерея изображений */
-
-.imageGallery {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
 .gallery {
   display: flex;
   justify-content: center;
@@ -137,77 +137,286 @@
   gap: 20px;
   margin-top: 40px;
   position: relative;
+  overflow: hidden;
 }
 
-/* Стилевые параметры для картинок */
-.room1,
-.room3 {
-  width: 992px;
-  height: 495px;
+.image {
   border-radius: 20px;
-  object-fit: cover;
-}
-
-.room2 {
-  width: 313px;
   height: 495px;
-  border-radius: 15px;
   object-fit: cover;
 }
 
-/* 🔄 Кнопки-стрелки */
-/* .arrowButton {
-  width: 56px;
-  height: 57px;
-  border-radius: 100px;
-  background: #ffffff;
-  box-shadow: 0px 15px 22px 0px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-}
-
-.arrowLeft {
-  left: 160px;
-  top: 50%;
-  transform: translateY(-50%) rotate(180deg);
-}
-
-.arrowRight {
-  right: 160px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* Стрелка внутри кнопки */
-/* .arrowIcon {
-  font-size: 14px;
-  color: black;
-} */
-
-/* 🔍 Иконка увеличения */
-/* .searchIcon {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  background: white;
-  box-shadow: 0px 15px 22px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  left: 809px;
-  top: 403px;
-} */
-
-/* Контейнер для карточек товара */
 .productContainer {
   display: flex;
   justify-content: center;
   padding: 40px;
+}
+
+.benefitsSection {
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.sectionTitle {
+  font-weight: 700;
+  font-size: 24px;
+  color: #262626;
+  margin-bottom: 20px;
+}
+
+.benefitsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #262626;
+}
+
+.benefitItem img {
+  width: 20px;
+  height: 20px;
+}
+
+.add {
+  width: 100%;
+  max-width: 100%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.projectOptions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.option {
+  width: 134px;
+  height: 85px;
+  background: #bd704833;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.optionTitle {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  color: #262626;
+}
+
+.optionDescription {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #262626b2;
+  margin-top: 10px;
+}
+
+.service__info {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.service__title {
+  font-weight: 700;
+  font-size: 38px;
+  margin-bottom: 40px;
+}
+
+.service__container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.service__cart {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 300px;
+  text-align: left;
+}
+
+.index {
+  font-size: 70px;
+  font-weight: 700;
+  color: #bd714836;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.paragh {
+  font-size: 15px;
+  color: #26262671;
+}
+
+@media (max-width: 1024px) {
+  .descriptionWrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .description,
+  .details {
+    font-size: 18px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .descriptionWrapper {
+    gap: 15px;
+  }
+
+  .description,
+  .details {
+    font-size: 16px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .description,
+  .details {
+    font-size: 14px;
+  }
+
+  .category {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .price {
+    font-size: 18px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 12px 30px;
+  }
+
+  .sectionTitle {
+    font-size: 26px;
+  }
+
+  .pdfSize {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .button {
+    font-size: 14px;
+    padding: 10px 25px;
+  }
+
+  .pdfSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pdfButton {
+    font-size: 14px;
+  }
+
+  .pdfSize {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    font-size: 12px;
+    padding: 8px 20px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .price {
+    font-size: 14px;
+  }
+
+  .pdfButton {
+    font-size: 13px;
+  }
+
+  .pdfSize {
+    font-size: 14px;
+  }
+
+  .sectionTitle {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .service__container {
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+  }
+
+  .service__cart {
+    max-width: 100%;
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .service__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .service__cart {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .index {
+    font-size: 50px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .paragh {
+    font-size: 14px;
+  }
 }

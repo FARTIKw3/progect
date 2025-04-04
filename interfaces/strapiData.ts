@@ -9,27 +9,13 @@ export interface ILivingRoom {
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
-  image: Image[];
+  image: IImage[];
 }
 
-export interface Image {
+export interface IImage {
   id: number;
-  documentId: string;
-  name: string;
-  alternativeText: string;
-  caption: string;
   width: number;
-  height: number;
-  formats: Formats;
-  hash: string;
-  ext: string;
-  mime: string;
-  size: number;
   url: string;
-  provider: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
 }
 
 export interface Formats {
