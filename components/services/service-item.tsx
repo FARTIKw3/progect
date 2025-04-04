@@ -39,7 +39,7 @@ export default function ServiceItem({
                 height={16}
                 alt=""
               />{" "}
-              В корзину
+              В корзиxy
             </button>
 
             <a href="#" className={styles.buy}>
